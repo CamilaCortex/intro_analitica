@@ -1,0 +1,6 @@
+# Normaliza finales de línea entre Windows y macOS
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.pptx binary
+*.png binary
+*.joblib binary

@@ -1,0 +1,50 @@
+[project]
+name = "intro-analitica"
+version = "0.1.0"
+description = "Proyecto 1 — Especialización en Analítica, Universidad de Medellín: de los datos al modelo en producción"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    # --- Datos y visualización ---
+    "pandas>=3.0",
+    "numpy>=2.3",
+    "matplotlib>=3.10",
+    "seaborn>=0.13.2",
+    "tabulate>=0.9",       # tablas en Markdown (DataFrame.to_markdown)
+    # --- Machine Learning ---
+    "scikit-learn>=1.8",
+    "xgboost>=3.0",
+    "joblib>=1.5",
+    # --- Notebooks ---
+    "jupyter>=1.1",
+    "ipykernel>=6.30",
+    # --- API (módulo 08) ---
+    "fastapi>=0.136",
+    "uvicorn[standard]>=0.46",
+    "pydantic>=2.11",
+    "httpx>=0.28",
+    "requests>=2.32",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4",
+    "ruff>=0.13",
+]
+
+# El paquete `src/intro_analitica` se instala en modo editable con `uv sync`,
+# así cualquier notebook o script puede hacer `from intro_analitica import ...`
+[build-system]
+requires = ["uv_build>=0.9,<0.20"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["*.ipynb"]
+
+[tool.pytest.ini_options]
+testpaths = ["08-API-FastAPI/tests"]
+pythonpath = ["08-API-FastAPI"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["intro_analitica", "api"]
