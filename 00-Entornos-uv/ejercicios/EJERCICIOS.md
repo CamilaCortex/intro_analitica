@@ -39,12 +39,38 @@ uv add pandas numpy matplotlib seaborn scikit-learn jupyter ipykernel
 uv add --dev pytest ruff
 ```
 
-Luego organicen la estructura base que usarán todo el curso:
+Luego organicen la estructura base que usarán todo el curso. Usen el comando de su sistema operativo:
+
+**macOS / Linux (y Git Bash en Windows)**
 
 ```bash
 mkdir -p data/raw data/processed notebooks src docs models
 touch data/raw/.gitkeep data/processed/.gitkeep models/.gitkeep
 ```
+
+**Windows (PowerShell)**
+
+```powershell
+New-Item -ItemType Directory -Force -Path data/raw, data/processed, notebooks, src, docs, models
+New-Item -ItemType File -Force -Path data/raw/.gitkeep, data/processed/.gitkeep, models/.gitkeep
+```
+
+**Windows (Símbolo del sistema, CMD)**
+
+```cmd
+mkdir data\raw data\processed notebooks src docs models
+type nul > data\raw\.gitkeep
+type nul > data\processed\.gitkeep
+type nul > models\.gitkeep
+```
+
+**Alternativa para cualquier sistema (con Python, mediante uv)**
+
+```bash
+uv run python -c "from pathlib import Path; [Path(d).mkdir(parents=True, exist_ok=True) for d in ['data/raw', 'data/processed', 'notebooks', 'src', 'docs', 'models']]; [Path(f).touch() for f in ['data/raw/.gitkeep', 'data/processed/.gitkeep', 'models/.gitkeep']]"
+```
+
+> **¿Para qué sirve `.gitkeep`?** Git no guarda carpetas vacías. Un archivo vacío llamado `.gitkeep` hace que la carpeta se suba al repositorio aunque todavía no tenga contenido.
 
 ### Paso 2: Revisar lo que se generó (10 min)
 

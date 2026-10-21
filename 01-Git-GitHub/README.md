@@ -9,6 +9,7 @@
 | Archivo | Para qué sirve |
 |---|---|
 | `README.md` | Teoría y paso a paso (estás aquí) |
+| `guia-practica-git.md` | Guía de la práctica paso a paso y comandos esenciales de Git y GitHub |
 | `guia-comandos.md` | Resumen de comandos para tener a mano |
 | `scripts/practica_conflicto.sh` | Crea un repositorio de juguete con un conflicto para practicar sin miedo |
 | `scripts/revisar_repo.py` | Revisa que el repositorio del equipo cumpla las buenas prácticas del curso |
