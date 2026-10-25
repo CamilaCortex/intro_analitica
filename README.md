@@ -2,7 +2,7 @@
 
 **Universidad de Medellín, Especialización en Analítica**
 
-En este curso se construye un proyecto de ciencia de datos **de principio a fin**: se parte de una pregunta de negocio y se termina con un modelo disponible como API, siguiendo la metodología **CRISP-DM** y trabajando en equipo con **Git y GitHub**.
+En este curso se construye un proyecto de ciencia de datos **de principio a fin**: se parte de una pregunta de negocio y se termina con un modelo evaluado y listo para usarse, siguiendo la metodología **CRISP-DM** y trabajando en equipo con **Git y GitHub**.
 
 
 ## Instructora
@@ -27,67 +27,64 @@ Al finalizar serás capaz de:
 ## Mapa del curso
 
 ```
-   ┌──────────────── FUNDAMENTOS ────────────────┐
-   │  00 Entornos (uv)   →   01 Git y GitHub     │
-   └─────────────────────────────────────────────┘
-                         │
-   ┌──────────────────── CRISP-DM ─────────────────────────────────────┐
-   │ 02 BI y Analítica → 03 CRISP-DM → 04 Preparación → 05 EDA         │
-   │       (negocio)       (datos)       (limpieza)      (hipótesis)   │
-   │                                         │                         │
-   │               06 Modelado → 07 Pipelines → 08 API (FastAPI)       │
-   │               (métricas)    (reproducible)   (despliegue)         │
-   └───────────────────────────────────────────────────────────────────┘
-                         │
-                 09 Proyecto final
+   ┌───────────────────────────── FUNDAMENTOS ──────────────────────────────┐
+   │  00 Entornos (uv)   →   01 Git y GitHub                                │
+   └────────────────────────────────────────────────────────────────────────┘
+                                       │
+   ┌─────────────────────────────── CRISP-DM ───────────────────────────────┐
+   │  02 Del problema  →  03 Preparación  →  04 Modelado  →  05 Del modelo  │
+   │     a los datos         y EDA             y métricas      al producto  │
+   │     (negocio y          (limpieza y       (baseline y     (pipelines   │
+   │     datos)              hallazgos)        métricas)       y API)       │
+   └────────────────────────────────────────────────────────────────────────┘
+                                       │
+                               06 Proyecto final
 ```
 
-| # | Módulo | Qué aprenderás | Base del profesor |
-|---|--------|----------------|-------------------|
-| 00 | [Entornos con uv](00-Entornos-uv/) | Entornos virtuales, `pyproject.toml`, `uv.lock` y kernel de Jupyter | `pyproject.toml` y `uv` del ejemplo de API |
-| 01 | [Git y GitHub](01-Git-GitHub/) | Commits, ramas, *pull requests*, conflictos y trabajo en equipo | Entrega final en GitHub |
-| 02 | [BI y Analítica](02-BI-Analitica/) | BI vs. analítica, KPIs y los 4 tipos de análisis | `sesion_1_intro_bi.pdf` |
-| 03 | [CRISP-DM](03-CRISP-DM/) | Comprensión del negocio y de los datos, *project charter* | `sesion_2_crisp_dm.pdf` |
-| 04 | [Preparación de datos](04-Preparacion-Datos/) | Limpieza, integración (*joins*), escalado y *encoding* | `sesion_3_preparacion_de_datos` |
-| 05 | [EDA](05-EDA/) | Distribuciones, *outliers*, correlaciones e hipótesis | `sesion_3` (parte EDA) |
-| 06 | [Modelado y métricas](06-Modelado-Metricas/) | *Baseline*, regresión, clasificación, *overfitting* | `sesion_6_modelo.ipynb` |
-| 07 | [Pipelines](07-Pipelines/) | `Pipeline`, `ColumnTransformer`, CV y `GridSearchCV` | `sesion_7_pipelines.ipynb` |
-| 08 | [API con FastAPI](08-API-FastAPI/) | Servir el modelo, validar con Pydantic, probar con pytest | `api-example-udem-2026-01` |
-| 09 | [Proyecto final](09-Proyecto-Final/) | Plantilla, rúbrica, checklist y presentación | Cronograma del curso |
+| # | Módulo | Sesión | Qué aprenderás |
+|---|--------|--------|----------------|
+| | Introducción al curso | Lun 19 oct | Objetivos, metodología, fechas y equipos |
+| 00 | [Entornos con uv](00-Entornos-uv/) | Mar 20 oct | Entornos virtuales, `pyproject.toml`, `uv.lock` y kernel de Jupyter |
+| 01 | [Git y GitHub](01-Git-GitHub/) | Mié 21 oct | Repositorio del equipo, `pull`, `add`, `commit`, `push` y Conventional Commits |
+| 02 | [Del problema a los datos](02-Problema-y-Datos/) | Lun 26 oct | BI y analítica, KPIs, tipos de análisis, CRISP-DM y calidad de los datos |
+| 03 | [Preparación de datos y EDA](03-Preparacion-y-EDA/) | Mar 27 oct | Limpieza con criterio de negocio, *data leakage*, gráficos y hallazgos |
+| 04 | [Modelado y métricas](04-Modelado-Metricas/) | Mié 28 oct | *Baseline*, regresión, clasificación, métricas y *overfitting* |
+| | Trabajo autónomo | 29 oct al 10 nov | Avance intermedio el 4 de noviembre |
+| 05 | [Del modelo al producto](05-Pipelines-y-API/) | Mié 11 nov | `Pipeline`, guardar el modelo y API con FastAPI (demostración) |
+| 06 | [Proyecto final](06-Proyecto-Final/) | Mié 25 nov | Sustentación: plantilla, rúbrica, checklist y guía de la presentación |
 
 ## Cómo está organizado cada módulo
 
 ```
 NN-Nombre-Modulo/
 ├── README.md              ← teoría explicada paso a paso (empieza aquí)
-├── notebooks/             ← práctica guiada (primera parte de la clase), cuando aplica
-├── scripts/               ← la misma lógica en .py ejecutables y documentados
+├── notebooks/             ← práctica guiada con House Prices
+│   └── complementario/    ← para profundizar (no se ve en clase), cuando aplica
 ├── ejercicios/
-│   ├── EJERCICIOS.md      ← actividad en salas de Zoom (segunda parte de la clase)
+│   ├── EJERCICIOS.md      ← práctica guiada y actividad en salas de Zoom
 │   └── soluciones/        ← soluciones de los ejercicios guiados
 └── presentacion/          ← diapositivas del módulo (.pptx)
 ```
 
-### El hilo del proyecto: los ejercicios están encadenados
+Cada clase sigue el mismo formato: **explicación** (40 min), **práctica guiada** (15 min), **salas de Zoom** en equipos de 3 (45 min) y **plenaria** (10 min).
 
-La **segunda parte de cada clase** se trabaja en equipos de 3 personas en salas de Zoom. Cada ejercicio produce un entregable en el **repositorio del equipo**, y ese entregable es el punto de partida del módulo siguiente. Así, al final del curso el equipo ya tiene su proyecto armado.
+### El hilo del proyecto: un solo notebook por equipo
 
-| Módulo | Entregable del equipo (en su repositorio) | Lo usa el módulo |
-|---|---|---|
-| 00 | Proyecto `uv` del equipo con `pyproject.toml` + `uv.lock` | 01 |
-| 01 | Repositorio en GitHub con estructura, ramas y primer PR | todos |
-| 02 | `docs/01_problema_y_kpis.md`: tema, dataset candidato y 3 KPIs | 03 |
-| 03 | `docs/02_project_charter.md` + perfil inicial del dataset | 04 |
-| 04 | `src/limpieza.py` + `docs/03_decisiones_limpieza.md` | 05 |
-| 05 | `notebooks/eda.ipynb` + 5 hallazgos e hipótesis | 06 |
-| 06 | *Baseline* y primer modelo con métricas justificadas | 07 |
-| 07 | `src/train.py` que entrena el pipeline y guarda el modelo | 08 |
-| 08 | API con `/health` y `/predict` + pruebas | 09 |
-| 09 | Entrega final y presentación | |
+Desde el módulo 02, cada equipo construye su proyecto en **un solo notebook**, [`notebooks/proyecto_equipo.ipynb`](06-Proyecto-Final/plantilla/), dentro de su repositorio. En cada clase se completa una parte, y al final ese notebook es la base de la sustentación.
+
+| Módulo | Sesión | Secciones del notebook del equipo | Lo usa |
+|---|---|---|---|
+| 00 | 20 oct | Proyecto `uv` del equipo con `pyproject.toml` y `uv.lock` | 01 |
+| 01 | 21 oct | Repositorio en GitHub con los 3 integrantes | todos |
+| 02 | 26 oct | 0. Configuración · 1. El problema · 2. Los datos | 03 |
+| 03 | 27 oct | 3. Limpieza · 4. EDA | 04 |
+| 04 | 28 oct | 5. Modelo | 05 |
+| 05 | 11 nov | 6. Conclusiones · esquema de la presentación | 06 |
+| 06 | 25 nov | Sustentación | |
 
 ### Dataset guía: House Prices (Ames, Iowa)
 
-Los notebooks usan **un mismo caso de punta a punta** para que se vea el ciclo completo: limpiar (04) → explorar (05) → modelar (06) → empaquetar (07) → desplegar (08). Los datos ya están en `data/raw/`, así que no hay que descargar nada.
+Los notebooks de los módulos usan **un mismo caso de punta a punta** para que se vea el ciclo completo: entender el problema (02) → limpiar y explorar (03) → modelar (04) → empaquetar y desplegar (05). Los datos ya están en `data/raw/`, así que no hay que descargar nada.
 
 ## Stack tecnológico
 
@@ -138,8 +135,8 @@ intro_analitica/
 │   ├── raw/                ← datos originales (no se modifican nunca)
 │   └── processed/          ← datos generados por los notebooks (ignorado por git)
 ├── models/                 ← modelos entrenados (ignorado por git)
-├── src/intro_analitica/    ← funciones reutilizables (config, datos, limpieza, eda, métricas)
-├── 00-Entornos-uv/ … 09-Proyecto-Final/
+├── src/intro_analitica/    ← funciones reutilizables (config, datos, limpieza, eda, métricas, pipeline)
+├── 00-Entornos-uv/ … 06-Proyecto-Final/
 ```
 
 ## Prerrequisitos

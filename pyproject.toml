@@ -18,7 +18,7 @@ dependencies = [
     # --- Notebooks ---
     "jupyter>=1.1",
     "ipykernel>=6.30",
-    # --- API (módulo 08) ---
+    # --- API (módulo 05) ---
     "fastapi>=0.136",
     "uvicorn[standard]>=0.46",
     "pydantic>=2.11",
@@ -43,8 +43,8 @@ line-length = 100
 extend-exclude = ["*.ipynb"]
 
 [tool.pytest.ini_options]
-testpaths = ["08-API-FastAPI/tests"]
-pythonpath = ["08-API-FastAPI"]
+testpaths = ["05-Pipelines-y-API/tests"]
+pythonpath = ["05-Pipelines-y-API"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["intro_analitica", "api"]

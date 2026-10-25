@@ -30,10 +30,10 @@ def cargar_house_prices(ruta: str | Path | None = None) -> pd.DataFrame:
 
 
 def cargar_house_prices_limpio(ruta: str | Path | None = None) -> pd.DataFrame:
-    """Carga la versión limpia generada en el módulo 04.
+    """Carga la versión limpia generada en el módulo 03.
 
     Si el archivo aún no existe, lo genera al vuelo (limpieza + variables nuevas,
-    igual que ``04-Preparacion-Datos/scripts/preparar_house_prices.py``) para que
+    igual que en ``03-Preparacion-y-EDA/notebooks/01_preparacion_house_prices.ipynb``) para que
     ningún notebook "se quede sin datos".
     """
     ruta = Path(ruta) if ruta else config.HOUSE_PRICES_LIMPIO

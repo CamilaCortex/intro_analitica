@@ -1,6 +1,6 @@
 # Módulo 01: Git y GitHub para trabajar en equipo
 
-> **Objetivo:** que el equipo tenga **un solo repositorio** donde los tres trabajan al tiempo sin pisarse, y que sepa resolver un conflicto sin entrar en pánico.
+> **Objetivo:** que el equipo tenga **un solo repositorio** donde los tres suben y traen cambios sin pisarse, con mensajes de commit claros.
 
 **Duración sugerida:** 2 horas (1 h de explicación y práctica guiada, 1 h de trabajo en salas)
 
@@ -11,11 +11,9 @@
 | `README.md` | Teoría y paso a paso (estás aquí) |
 | `guia-practica-git.md` | Guía de la práctica paso a paso y comandos esenciales de Git y GitHub |
 | `guia-comandos.md` | Resumen de comandos para tener a mano |
-| `scripts/practica_conflicto.sh` | Crea un repositorio de juguete con un conflicto para practicar sin miedo |
-| `scripts/revisar_repo.py` | Revisa que el repositorio del equipo cumpla las buenas prácticas del curso |
-| `plantillas/` | `.gitignore`, README del equipo y plantilla de *pull request* |
+| `README_equipo.md` | Plantilla del README del repositorio del equipo |
+| `plantillas/` | `.gitignore` del proyecto y plantilla de *pull request* (opcional) |
 | `ejercicios/EJERCICIOS.md` | Actividad para salas de Zoom |
-| `presentacion/01-Git-GitHub.pptx` | Diapositivas de la clase |
 
 ---
 
@@ -121,7 +119,11 @@ git push -u origin main
 
 > Si subiste por error una contraseña, **cámbiala de inmediato**. Borrarla en un commit nuevo no la quita del historial.
 
-## 6. Ramas: trabajar al tiempo sin pisarse
+## 6. Para profundizar (opcional): ramas, *pull requests* y conflictos
+
+En el curso trabajamos todos sobre `main` con el ciclo `pull → add → commit → push`. Las secciones 6 a 8 explican cómo trabajan los equipos de desarrollo más grandes; no son necesarias para el proyecto.
+
+### Ramas: trabajar al tiempo sin pisarse
 
 Una **rama** (*branch*) es una línea de trabajo paralela. `main` es la rama "oficial", la que siempre debe funcionar.
 
@@ -139,7 +141,7 @@ git switch -c feature/eda          # crear la rama y moverse a ella
 git push -u origin feature/eda     # subir la rama a GitHub
 ```
 
-## 7. *Pull requests* (PR): revisar antes de unir
+### *Pull requests* (PR): revisar antes de unir
 
 Un **pull request** es una solicitud del tipo "revisen mis cambios y, si están bien, únanlos a `main`".
 
@@ -151,7 +153,7 @@ Un **pull request** es una solicitud del tipo "revisen mis cambios y, si están 
 
 > **Regla del equipo:** nadie hace `push` directo a `main`. Todo entra por PR. Pueden activarlo en GitHub en *Settings → Branches → Add rule → Require a pull request before merging*.
 
-## 8. Conflictos: no son errores, son preguntas
+### Conflictos: no son errores, son preguntas
 
 Un conflicto ocurre cuando **dos personas cambian la misma línea** del mismo archivo. Git no sabe cuál versión dejar y te pregunta:
 
@@ -169,13 +171,7 @@ Objetivo: estimar el valor comercial de un inmueble
 2. Deja el texto como debe quedar y **borra las marcas** `<<<<<<<`, `=======` y `>>>>>>>`.
 3. `git add archivo` y luego `git commit`.
 
-**Practica sin miedo** con el script que crea un conflicto de juguete:
-
-```bash
-bash 01-Git-GitHub/scripts/practica_conflicto.sh
-```
-
-## 9. Buenos mensajes de commit
+## 7. Buenos mensajes de commit
 
 Usamos un formato sencillo, **tipo: descripción en presente**:
 
@@ -190,34 +186,26 @@ Usamos un formato sencillo, **tipo: descripción en presente**:
 Incorrecto: `cambios`, `asdf`, `ya quedó`, `final final`
 Correcto: `feat: calcula KPI de precio mediano por barrio`
 
-## 10. Notebooks y Git: tips
+## 8. Notebooks y Git: tips
 
 - Antes de hacer commit, **reinicia el kernel y ejecuta todo**: así el notebook queda reproducible.
 - Los notebooks con salidas enormes (gráficas, tablas de 1000 filas) hacen difícil revisar los PR. Limpia las salidas muy grandes.
-- **Dos personas no deben editar el mismo notebook al tiempo**: los conflictos en `.ipynb` son difíciles de resolver. Repártanse notebooks o pasen la lógica a `src/`.
+- **Dos personas no deben editar el mismo notebook al tiempo**: los conflictos en `.ipynb` son difíciles de resolver. Por eso, en las salas de Zoom **solo el piloto edita** `notebooks/proyecto_equipo.ipynb`; los demás ayudan desde su pantalla y hacen `git pull` al final.
 
-## 11. GitHub para organizar al equipo
+## 9. GitHub para organizar al equipo
 
 - **Issues:** una tarea por *issue* ("Hacer EDA de variables numéricas"), con un responsable asignado.
 - **Projects:** un tablero Kanban (*To do → In progress → Done*).
 - Escribir `Closes #3` en la descripción del PR cierra el *issue* automáticamente cuando se une.
-
-## 12. Revisa tu repositorio
-
-```bash
-uv run python 01-Git-GitHub/scripts/revisar_repo.py ruta/al/proyecto-del-equipo
-```
-
-Revisa la estructura, `.gitignore`, `uv.lock`, archivos pesados, secretos y que `.venv` no esté versionado.
 
 ---
 
 ## Checklist del módulo
 
 - [ ] `git config` con mi nombre y correo
-- [ ] `gh auth login` (o SSH) funcionando
-- [ ] Repositorio del equipo en GitHub, con los 3 integrantes como colaboradores
-- [ ] Cada integrante hizo al menos un PR
-- [ ] Resolví un conflicto (con el script de práctica o en el proyecto)
+- [ ] `gh auth login` funcionando
+- [ ] Repositorio del equipo en GitHub, con los 3 integrantes y la profesora como colaboradores
+- [ ] Sé hacer el ciclo `git pull → git add → git commit → git push`
+- [ ] Escribo los mensajes de commit con el formato *tipo: descripción*
 
-**Anterior:** [Módulo 00: Entornos](../00-Entornos-uv/) · **Siguiente:** [Módulo 02: BI y Analítica](../02-BI-Analitica/)
+**Anterior:** [Módulo 00: Entornos](../00-Entornos-uv/) · **Siguiente:** [Módulo 02: Del problema a los datos](../02-Problema-y-Datos/)

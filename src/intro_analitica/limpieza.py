@@ -1,7 +1,7 @@
 """
 Limpieza del dataset *House Prices* con **criterio de negocio**.
 
-La lección más importante del módulo 04 está resumida en este archivo:
+La lección más importante del módulo 03 está resumida en este archivo:
 
     En House Prices, la mayoría de los ``NaN`` NO son datos perdidos:
     significan "la casa no tiene eso" (no tiene piscina, no tiene garaje...).

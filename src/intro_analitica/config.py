@@ -43,7 +43,7 @@ HOUSING_SIMPLE = RAW_DIR / "housing.csv"  # dataset pequeño del ejemplo de API 
 SEMILLA = 42          # misma semilla en todo el curso = resultados reproducibles
 TARGET = "SalePrice"  # variable objetivo de House Prices
 
-# Subconjunto de variables que usamos para el modelo "de producción" (módulos 07-08).
+# Subconjunto de variables que usamos para el modelo "de producción" (módulo 05).
 # Es un subconjunto pequeño a propósito: la API debe pedir pocas entradas.
 FEATURES_NUMERICAS = [
     "LotArea",

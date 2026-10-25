@@ -1,5 +1,5 @@
 """
-Métricas de evaluación reutilizables (módulos 06 y 07).
+Métricas de evaluación reutilizables (módulos 04 y 05).
 
 Regla de oro: **un número solo no dice nada**. Siempre compara contra un
 *baseline* (p.ej. predecir siempre la mediana) y reporta varias métricas.

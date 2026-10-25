@@ -1,5 +1,5 @@
 """
-Herramientas de perfilamiento y calidad de datos (módulos 03 y 05).
+Herramientas de perfilamiento y calidad de datos (módulos 02 y 03).
 
 Estas funciones responden rápido las preguntas que SIEMPRE hay que hacerle a un
 dataset nuevo:

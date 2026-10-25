@@ -162,7 +162,7 @@ Cada persona hace **su** tarea, en **su** archivo:
 
 | Integrante | Archivo | Tarea | Mensaje de commit sugerido |
 |---|---|---|---|
-| Piloto | `README.md` | Copiar el contenido de `plantillas/README_equipo.md` y llenar la tabla del equipo | `docs: completa README con datos del equipo` |
+| Piloto | `README.md` | Copiar el contenido de `01-Git-GitHub/README_equipo.md` (en el repositorio del curso) y llenar la tabla del equipo | `docs: completa README con datos del equipo` |
 | Copiloto | `docs/00_acuerdos_equipo.md` | Horarios de reunión, canal de comunicación y cómo se reparten las tareas | `docs: agrega acuerdos del equipo` |
 | Relator | `src/hola.py` | Un script que imprima "Hola desde el equipo <nombre>" y la versión de pandas | `feat: agrega script de bienvenida` |
 
@@ -209,11 +209,7 @@ Repitan el ciclo **pull → cambio → add → commit → push** con un cambio p
 ### Reto opcional
 
 1. Revisen el historial en GitHub (**Commits**): ¿se distingue quién hizo cada cambio?
-2. Ejecuten el revisor del curso sobre su repositorio:
-   ```bash
-   uv run python <ruta>/intro_analitica/01-Git-GitHub/scripts/revisar_repo.py .
-   ```
-3. Escriban un commit con *scope*, por ejemplo `docs(readme): agrega sección de instalación`.
+2. Escriban un commit con *scope*, por ejemplo `docs(readme): agrega sección de instalación`.
 
 ---
 

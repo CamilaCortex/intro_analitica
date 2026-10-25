@@ -12,7 +12,7 @@
 
 ## Problema de negocio
 
-_(se completa en el módulo 02)_
+_(se completa en el módulo 02: qué decisión apoya el proyecto y cómo se mide el éxito)_
 
 ## Dataset
 
@@ -27,26 +27,29 @@ uv sync
 uv run jupyter lab
 ```
 
+Luego abrir `notebooks/proyecto_equipo.ipynb` y ejecutar todas las celdas (*Run All*).
+
 ## Estructura
 
 ```
 ├── data/raw/          ← datos originales
-├── data/processed/    ← datos limpios (generados)
-├── docs/              ← problema, charter, decisiones
-├── notebooks/         ← exploración
-├── src/               ← código reutilizable (limpieza, train, api)
-└── models/            ← modelos entrenados (generados)
+├── data/processed/    ← datos limpios (los genera el notebook; no se suben)
+├── notebooks/         ← proyecto_equipo.ipynb: el proyecto completo
+├── docs/              ← acuerdos del equipo y material de apoyo
+├── src/               ← código reutilizable (opcional)
+└── models/            ← modelo entrenado (lo genera el notebook; no se sube)
 ```
+
+## Resultados principales
+
+_(se completa en el módulo 05: resultado del modelo frente al baseline, hallazgos y límites)_
 
 ## Avance
 
 - [ ] 00 Entorno con uv
 - [ ] 01 Repositorio en GitHub
-- [ ] 02 Problema y KPIs
-- [ ] 03 Project charter
-- [ ] 04 Limpieza
-- [ ] 05 EDA
-- [ ] 06 Baseline
-- [ ] 07 Pipeline de entrenamiento
-- [ ] 08 API
-- [ ] 09 Entrega final
+- [ ] 02 Problema y datos (secciones 1 y 2 del notebook)
+- [ ] 03 Limpieza y EDA (secciones 3 y 4)
+- [ ] 04 Modelo (sección 5)
+- [ ] 05 Conclusiones (sección 6)
+- [ ] 06 Sustentación

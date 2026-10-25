@@ -278,7 +278,7 @@ default-groups = ["dev", "notebooks"]
 
 ## 8. Dependencias opcionales (extras)
 
-Los **extras** son funcionalidades opcionales **del propio proyecto** que el usuario decide si instala. Por ejemplo, la API del módulo 08 podría ser un extra para quien solo quiere entrenar modelos.
+Los **extras** son funcionalidades opcionales **del propio proyecto** que el usuario decide si instala. Por ejemplo, la API del módulo 05 podría ser un extra para quien solo quiere entrenar modelos.
 
 ```bash
 uv add --optional api fastapi "uvicorn[standard]"

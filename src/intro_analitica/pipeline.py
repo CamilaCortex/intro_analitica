@@ -1,5 +1,5 @@
 """
-Construcción del pipeline de House Prices (módulos 07 y 08).
+Construcción del pipeline de House Prices (módulo 05).
 
 Un ``Pipeline`` de scikit-learn encadena preprocesamiento + modelo en UN SOLO objeto:
 
@@ -8,11 +8,11 @@ Un ``Pipeline`` de scikit-learn encadena preprocesamiento + modelo en UN SOLO ob
 Ventajas:
     1. ``fit`` aprende el preprocesamiento SOLO con los datos de entrenamiento
        (adiós *data leakage*, incluso dentro de la validación cruzada).
-    2. Se guarda con ``joblib`` como un solo archivo: la API (módulo 08) recibe
+    2. Se guarda con ``joblib`` como un solo archivo: la API (módulo 05) recibe
        datos "como vienen" y el pipeline hace todo lo demás.
     3. Se puede cambiar el modelo o los hiperparámetros con ``set_params`` o ``GridSearchCV``.
 
-Este archivo lo usan el notebook del módulo 07 y ``07-Pipelines/scripts/train.py``,
+Este archivo lo usan el notebook del módulo 05 y ``05-Pipelines-y-API/scripts/train.py``,
 así que ambos construyen exactamente el mismo pipeline.
 """
 
@@ -99,7 +99,7 @@ def construir_pipeline(modelo=None, log_target: bool = True) -> Pipeline:
     ----------
     modelo:
         Cualquier regresor de scikit-learn. Por defecto, ``HistGradientBoostingRegressor``
-        (el elegido en el módulo 06).
+        (el elegido en el módulo 04).
     log_target:
         Si es ``True``, el modelo aprende ``log(1 + precio)`` y la predicción se
         devuelve en dólares automáticamente (``TransformedTargetRegressor``).
