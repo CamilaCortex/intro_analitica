@@ -123,12 +123,6 @@ La sección 5 de `proyecto_equipo.ipynb` hace este flujo con lo mínimo necesari
 - **Modelos de *ensemble*** (Random Forest, Gradient Boosting): muchos árboles juntos; suelen mejorar el resultado a cambio de ser menos interpretables.
 - **Curva ROC y elección del umbral** (secciones 3.3 y 3.4 del notebook 1), clave en clasificación cuando un tipo de error cuesta más que el otro.
 
-Soluciones de los ejercicios guiados:
-
-```bash
-uv run python 04-Modelado-Metricas/ejercicios/soluciones/solucion_01_metricas.py
-uv run python 04-Modelado-Metricas/ejercicios/soluciones/solucion_02_modelos.py
-```
 
 ## Checklist del módulo
 

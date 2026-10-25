@@ -11,45 +11,7 @@
 
 ---
 
-## Parte 1: Práctica guiada (15 min, primera parte de la clase)
-
-1. **Métricas a mano (8 min).** Un modelo de avalúos predijo estos precios:
-
-   | Casa | Precio real | Precio predicho |
-   |---|---|---|
-   | 1 | 250.000 | 240.000 |
-   | 2 | 300.000 | 310.000 |
-   | 3 | 200.000 | 210.000 |
-   | 4 | 400.000 | 380.000 |
-   | 5 | 350.000 | 340.000 |
-
-   Calculen el **MAE** (promedio del error absoluto, en dólares) y el **MAPE** (promedio del error en porcentaje). Pueden hacerlo a mano o con este código:
-
-   ```python
-   import numpy as np
-   reales = np.array([250_000, 300_000, 200_000, 400_000, 350_000])
-   predichos = np.array([240_000, 310_000, 210_000, 380_000, 340_000])
-   errores = reales - predichos
-   print("MAE :", np.mean(np.abs(errores)))
-   print("MAPE:", np.mean(np.abs(errores / reales)) * 100, "%")
-   ```
-
-   ¿Cómo le explicarían el resultado a un gerente, en una frase y sin usar la palabra "MAPE"?
-
-2. **¿Qué error es peor? (7 min, en parejas).** Para cada caso, ¿qué métrica priorizarían: *precision* (evitar falsas alarmas) o *recall* (que no se escape ningún caso)?
-
-   | Caso | Métrica |
-   |---|---|
-   | Detectar tumores malignos en mamografías | |
-   | Filtro de correo no deseado (spam) | |
-   | Detectar transacciones fraudulentas | |
-   | Recomendar a quién ofrecerle un crédito | |
-
-Soluciones en `soluciones/solucion_01_metricas.py` (ejercicios 1 y 2).
-
----
-
-## Parte 2: Salas de Zoom, el modelo del equipo (45 min)
+## Parte 1: Salas de Zoom, el modelo del equipo (45 min)
 
 > **Objetivo:** entrenar un *baseline* y dos modelos, y responder si el modelo le gana al *baseline* y si cumple el criterio de éxito.
 > **Viene de:** los hallazgos del EDA (sección 4) y el criterio de éxito (sección 1).

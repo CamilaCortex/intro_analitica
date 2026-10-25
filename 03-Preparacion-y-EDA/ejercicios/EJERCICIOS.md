@@ -9,29 +9,11 @@
 | 28 de octubre | 5. Modelo |
 | 11 de noviembre | 6. Conclusiones |
 
----
 
-## Parte 1: Práctica guiada (15 min, primera parte de la clase)
-
-Cada persona, con House Prices en los notebooks del repositorio del curso:
-
-1. **Imputar con criterio (8 min).** En `notebooks/01_preparacion_house_prices.ipynb`, `LotFrontage` (pies de frente a la calle) tiene 259 nulos y en clase los rellenamos con 0. Otra opción es la **mediana del barrio**:
-
-   ```python
-   df["LotFrontage_barrio"] = df.groupby("Neighborhood")["LotFrontage"].transform("median")
-   df["LotFrontage_imputado"] = df["LotFrontage"].fillna(df["LotFrontage_barrio"])
-   df[["LotFrontage", "LotFrontage_imputado"]].describe()
-   ```
-
-   ¿Cuál de las dos opciones les parece más razonable y por qué? No hay una única respuesta correcta: lo importante es el argumento.
-
-2. **Leer una gráfica (7 min).** En `notebooks/02_eda_house_prices.ipynb`, busquen la gráfica de violín del precio por `KitchenQual` (sección 3.3). Escriban el hallazgo en una frase con sus tres partes: **qué**, **evidencia** e **implicación**.
-
-Soluciones en `soluciones/solucion_01_preparacion.py` (ejercicio 1) y en la sección 10 del README del módulo (ejercicio 2).
 
 ---
 
-## Parte 2: Salas de Zoom, limpieza y EDA del equipo (45 min)
+## Parte 1: Salas de Zoom, limpieza y EDA del equipo (45 min)
 
 > **Objetivo:** resolver los problemas de calidad que encontraron ayer y salir con 3 hallazgos con evidencia.
 > **Viene de:** la sección 2 del notebook (problemas de calidad e hipótesis).
