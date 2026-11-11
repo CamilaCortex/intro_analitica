@@ -4,16 +4,7 @@
 
 ---
 
-## Parte 1: Ejercicios guiados (35 min, primera parte de la clase)
-
-| Notebook | Ejercicios | Solución |
-|---|---|---|
-| `01_pipelines_iris.ipynb` | SVC en la grilla · quitar PCA · `RandomizedSearchCV` | `soluciones/solucion_07_iris.py` |
-| `02_pipeline_house_prices.ipynb` | `TotalSF` en el pipeline · RF con log · robustez a nulos · importancia por permutación | `soluciones/solucion_07_house_prices.py` |
-
----
-
-## Parte 2: Salas de Zoom, el `train.py` del equipo (60 min)
+## Parte 1: Salas de Zoom, el `train.py` del equipo (60 min)
 
 > **Objetivo:** que **cualquier persona** pueda reproducir el modelo del equipo con **un solo comando** y obtenga el mismo archivo `.joblib`.
 > **Viene de:** el modelo elegido en `docs/05_modelado.md` (módulo 06) y `src/limpieza.py` (módulo 04).
