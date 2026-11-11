@@ -3,7 +3,8 @@ API REST para el modelo de precios de vivienda.
 
 Levantar el servidor (desde la raíz del repo)::
 
-    uv run uvicorn api.main:app --reload
+    uv run uvicorn api.main:app --reload --app-dir 08-API-FastAPI 
+    
     # o
     uv run python 08-API-FastAPI/api/main.py
 
