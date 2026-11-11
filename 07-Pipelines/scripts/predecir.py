@@ -62,3 +62,11 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# uv run python scripts/predecir.py --json '{"LotArea": 9000, "OverallQual": 7, "OverallCond": 5,
+#   "YearBuilt": 2005, "YearRemodAdd": 2006, "GrLivArea": 1800, "TotalBsmtSF": 1000,
+#   "FullBath": 2, "BedroomAbvGr": 3, "GarageCars": 2, "Neighborhood": "CollgCr",
+#   "BldgType": "1Fam", "HouseStyle": "2Story", "KitchenQual": "Gd"}'
+
+# uv run python scripts/predecir.py --csv ../data/raw/house_prices/test.csv --salida ../reports/predicciones.csv
